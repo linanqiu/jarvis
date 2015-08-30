@@ -1,0 +1,44 @@
+<template name="Register">
+<div class="page-container container" id="content">
+	<div class="row" id="title_row">
+		<div class="col-md-12">
+			<h2 id="page_title" class="pull-left">
+			Register
+			</h2>
+			<div id="page_menu" class="pull-right">
+			</div>
+		</div>
+	</div>
+	{{> RegisterRegisterJumbotron}}
+</div>
+</template>
+<template name="RegisterRegisterJumbotron">
+<div class="jumbotron ">
+	<div id="content" class="container">
+		<h1 id="component-title">
+		Welcome, young trainer!
+		</h1>
+		{{#if uniVerified}}
+		<p>Great! You're registered for this class! Just log in using your GitHub account to complete the setup.</p>
+		<p><a class="btn btn-primary btn-lg" role="button" href="https://github.com/login/oauth/authorize?client_id={{clientId}}&state={{state}}">GitHub Login</a></p>
+		<p>Don't have a GitHub account? Boy you're missing out. <a href="https://github.com/">Register here!</a></p>
+		{{else}}
+		<p>
+			Enter your UNI to begin your GitHub setup
+		</p>
+		{{#if isNotRegistered}}
+		{{> RegisterNotRegisteredForClass}}
+		{{/if}}
+		<form class="form-uni">
+			<div class="form-group">
+				<label for="uniInput">UNI</label>
+				<input type="text" class="form-control" id="uniTextInput" placeholder="ab1234">
+			</div>
+		</form>
+		{{/if}}
+	</div>
+</div>
+</template>
+<template name="RegisterNotRegisteredForClass">
+<div class="alert alert-danger" role="alert">You don't seem to be registered for this class. If you think you should be, contact the Head TA!</div>
+</template>
