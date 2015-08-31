@@ -15,10 +15,14 @@ matb33:collection-hooks
 copleykj:livestamp
 less
 nemo64:bootstrap
-accounts-github
 meteorhacks:npm
 
 
 npm-container
 u2622:persistent-session
 aldeed:http
+ian:accounts-ui-bootstrap-3
+accounts-base
+accounts-password
+aldeed:simple-schema
+houston:admin

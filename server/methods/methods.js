@@ -16,10 +16,27 @@ Meteor.methods({
   },
   'checkUniExists': function (uni) {
     console.log('Checking uni');
-    var student = EnrolledStudents.findOne({
+    var enrolledStudent = EnrolledStudents.findOne({
       uni: uni
     });
-    return (typeof student !== 'undefined');
+
+    var enrolled = typeof enrolledStudent !== 'undefined';
+
+    var student = Students.findOne({
+      uni: uni
+    });
+
+    var registered = typeof student !== 'undefined';
+
+    if (enrolled) {
+      if (registered) {
+        throw new Meteor.Error(500, 'Already registered');
+      } else {
+        return true;
+      }
+    } else {
+      throw new Meteor.Error(500, 'Not enrolled');
+    }
   },
   'requestAccessToken': function (state, code) {
     return requestAccessToken(state, code);
@@ -91,7 +108,8 @@ function requestAccessToken(state, code) {
       githubUsername: login,
       accessToken: accessToken,
       homeworks: {},
-      nickname: randomPokemon()
+      nickname: randomPokemon(),
+      email: foundState.uni + '@columbia.edu'
     }
   });
 
@@ -205,7 +223,9 @@ function addCiBuild(student) {
 
   console.log('Sending email');
   // sends success email
-  sendEmail('registerSuccess', student.uni + '@columbia.edu');
+  sendEmail('registerSuccess', student.email, {
+    student: student
+  });
 
   return true;
 }
@@ -240,16 +260,35 @@ function extractGrades(body) {
 
       var output = JSON.parse(outputUnzip.toString());
 
-      var grades = JSON.parse(output[0].message);
+      if (step.actions[0].failed) {
+        console.log('Build script failed');
+        console.log(output);
+        var errorMessage = output[0].message;
+        // workaround for lack of homework grade information
+        var homeworkName = CurrentHomework.findOne().currentHomework;
 
-      console.log(grades);
+        var grades = {
+          homeworkName: homeworkName,
+          studentScore: 0,
+          errorMessage: errorMessage,
+          className: 'cs3134'
+        }
 
-      addHomeworkGrades(grades, githubUsername);
+        console.log(grades);
+
+        addHomeworkGrades(grades, githubUsername, true);
+      } else {
+        var grades = JSON.parse(output[0].message);
+
+        console.log(grades);
+
+        addHomeworkGrades(grades, githubUsername);
+      }
     }
   });
 }
 
-function addHomeworkGrades(grades, githubUsername) {
+function addHomeworkGrades(grades, githubUsername, errorMessage) {
   var homeworkName = grades.homeworkName;
 
   var student = Students.findOne({
@@ -268,27 +307,46 @@ function addHomeworkGrades(grades, githubUsername) {
     }
   });
 
-  sendEmail('webhookGrades', student.uni + '@columbia.edu', {
-    homeworkName: homeworkName,
-    grades: grades
-  });
+  if (errorMessage) {
+    sendEmail('webhookGradesFail', student.email, {
+      homeworkName: homeworkName,
+      grades: grades
+    });
+  } else {
+    sendEmail('webhookGrades', student.email, {
+      homeworkName: homeworkName,
+      grades: grades
+    });
+  }
 }
 
 function sendEmail(templateToUse, toEmail, data) {
   if (templateToUse === 'registerSuccess') {
+    console.log('Sending registerSuccess email');
     Email.send({
       from: 'Jarvis',
       to: toEmail,
       subject: 'Jarvis Registration Completed',
-      text: 'You\'re successfully registered for the class!'
+      text: JSON.stringify(data.student, null, 2)
     });
   }
 
   if (templateToUse === 'webhookGrades') {
+    console.log('Sending webhookGrades email');
     Email.send({
       from: 'Jarvis',
       to: toEmail,
       subject: data.homeworkName + ' Preliminary Grades',
+      text: JSON.stringify(data.grades, null, 2)
+    });
+  }
+
+  if (templateToUse === 'webhookGradesFail') {
+    console.log('Sending webhookGradesFail email');
+    Email.send({
+      from: 'Jarvis',
+      to: toEmail,
+      subject: data.homeworkName + ' Build Failed',
       text: JSON.stringify(data.grades, null, 2)
     });
   }

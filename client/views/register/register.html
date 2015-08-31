@@ -26,8 +26,8 @@
 		<p>
 			Enter your UNI to begin your GitHub setup
 		</p>
-		{{#if isNotRegistered}}
-		{{> RegisterNotRegisteredForClass}}
+		{{#if registrationErrorReason}}
+			<div class="alert alert-danger" role="alert">Error: {{registrationErrorReason}}. If you think this is wrong, contact the Head TA!</div>
 		{{/if}}
 		<form class="form-uni">
 			<div class="form-group">
@@ -38,7 +38,4 @@
 		{{/if}}
 	</div>
 </div>
-</template>
-<template name="RegisterNotRegisteredForClass">
-<div class="alert alert-danger" role="alert">You don't seem to be registered for this class. If you think you should be, contact the Head TA!</div>
 </template>

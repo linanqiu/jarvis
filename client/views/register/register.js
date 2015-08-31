@@ -20,16 +20,15 @@ Template.RegisterRegisterJumbotron.events({
 		var uni = event.target.uniTextInput.value;
 		Meteor.call('checkUniExists', uni, function (err, uniVerified) {
 			if (err) {
-				console.error(err);
-			}
-			if (uniVerified) {
-				Session.set('isNotRegistered', false);
-				Session.set('uniVerified', uniVerified);
-				Session.setPersistent('uni', uni);
-
-				Meteor.call('addState', Session.get('state'), uni);
+				Session.set('registrationErrorReason', err.reason);
 			} else {
-				Session.set('isNotRegistered', true);
+				if (uniVerified) {
+					Session.set('registrationErrorReason', null);
+					Session.set('uniVerified', uniVerified);
+					Session.setPersistent('uni', uni);
+
+					Meteor.call('addState', Session.get('state'), uni);
+				}
 			}
 		});
 	}
@@ -45,7 +44,7 @@ Template.RegisterRegisterJumbotron.helpers({
 	state: function () {
 		return Session.get('state');
 	},
-	isNotRegistered: function () {
-		return Session.get('isNotRegistered');
+	registrationErrorReason: function () {
+		return Session.get('registrationErrorReason');
 	}
 });

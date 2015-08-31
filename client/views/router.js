@@ -46,13 +46,7 @@ Router.route('/github', function () {
 
 	Meteor.call('requestAccessToken', state, code, function (err) {
 		if (err) {
-			router.render('GithubFail', {
-				data: function () {
-					return {
-						reason: err.reason
-					}
-				}
-			});
+			router.render('GithubFail');
 		} else {
 			router.render('GithubSuccess');
 		}
