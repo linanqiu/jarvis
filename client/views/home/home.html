@@ -1,14 +1,37 @@
 <template name="Home">
-	<div class="page-container container" id="content">
-		<div class="row" id="title_row">
-			<div class="col-md-12">
-				<h2 id="page_title" class="pull-left">
-					Home
-				</h2>
-				<div id="page_menu" class="pull-right">
-				</div>
+<div class="page-container container" id="content">
+	<div class="container">
+		<div class="page-header" id="banner">
+			<div class="jumbotron">
+				<h1>Jarvis</h1>
+				<p>The automated homework management system fit to be an avenger.</p>
+				<p><a class="btn btn-primary btn-lg" href="{{pathFor 'register'}}">Register</a></p>
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<div class="row">
+			<div class ="col-md-12">
+				<h2>What is Jarvis?</h2>
+				<p>Jarvis is built for CS3134. It helps you set up your repositories and teams on GitHub, listens for when you submit your homework, and helps you grade them automatically in our testing environment, giving you really quick feedback. (For the geekier ones among you, Jarvis is the front-end to our Continuous Integration service)</p>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h3>GitHub</h3>
+				<p>Jarvis helps you set up your repositories and teams on GitHub, allowing you to submit homeworks seamlessly via Git and not worry about zipping/unzipping homeworks and uploading them to Courseworks.</p>
+			</div>
+			<div class="col-md-4">
+				<h3>Continuous Integration</h3>
+				<p>Receive feedback every time you submit your homework, not just on the deadline. Jarvis uses CircleCI (and soon Jenkins) to automatically grade homeworks every time you push them to GitHub.</p>
+			</div>
+			<div class="col-md-4">
+				<h3>Scoreboard</h3>
+				<p>Scoreboard is a service provided by Jarvis that allows you to compete with other students based on the score tally of your homeworks. It is totally experimental and optional, but we have a feeling that you want to have some fun with this.</p>
+			</div>
+		</div>
+	</div>
+</div>
 </template>
-

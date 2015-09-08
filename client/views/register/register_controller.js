@@ -1,35 +1,41 @@
 this.RegisterController = RouteController.extend({
 	template: "Register",
-	
+
 
 	yieldTemplates: {
 		/*YIELD_TEMPLATES*/
 	},
 
-	onBeforeAction: function() {
+	onBeforeAction: function () {
+		Meteor.call('getState', function (err, resp) {
+			Session.set('state', resp);
+		});
 		this.next();
 	},
 
-	action: function() {
-		if(this.isReady()) { this.render(); } else { this.render("loading"); }
+	action: function () {
+		if (this.isReady()) {
+			this.render();
+		} else {
+			this.render("loading");
+		}
 		/*ACTION_FUNCTION*/
 	},
 
-	isReady: function() {
-		
+	isReady: function () {
 
-		var subs = [
-		];
+
+		var subs = [];
 		var ready = true;
-		_.each(subs, function(sub) {
-			if(!sub.ready())
+		_.each(subs, function (sub) {
+			if (!sub.ready())
 				ready = false;
 		});
 		return ready;
 	},
 
-	data: function() {
-		
+	data: function () {
+
 
 		return {
 			params: this.params || {}
@@ -37,6 +43,5 @@ this.RegisterController = RouteController.extend({
 		/*DATA_FUNCTION*/
 	},
 
-	onAfterAction: function() {
-	}
+	onAfterAction: function () {}
 });

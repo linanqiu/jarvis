@@ -42,6 +42,8 @@ Router.route('/github', function () {
 	var state = this.params.query.state;
 	var code = this.params.query.code;
 
+	Session.set('state', state);
+
 	var router = this;
 
 	Meteor.call('requestAccessToken', state, code, function (err) {

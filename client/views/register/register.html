@@ -16,18 +16,24 @@
 <div class="jumbotron ">
 	<div id="content" class="container">
 		<h1 id="component-title">
-		Welcome, young trainer!
+		Welcome, young cadet!
 		</h1>
 		{{#if uniVerified}}
 		<p>Great! You're registered for this class! Just log in using your GitHub account to complete the setup.</p>
 		<p><a class="btn btn-primary btn-lg" role="button" href="https://github.com/login/oauth/authorize?client_id={{clientId}}&state={{state}}">GitHub Login</a></p>
+		<div class="checkbox">
+			<label>
+				<input id='scoreboard-optin' type="checkbox" checked>I want to be part of the Scoreboard!
+			</label>
+		</div>
+		<br>
 		<p>Don't have a GitHub account? Boy you're missing out. <a href="https://github.com/">Register here!</a></p>
 		{{else}}
 		<p>
 			Enter your UNI to begin your GitHub setup
 		</p>
 		{{#if registrationErrorReason}}
-			<div class="alert alert-danger" role="alert">Error: {{registrationErrorReason}}. If you think this is wrong, contact the Head TA!</div>
+		<div class="alert alert-danger" role="alert">Error: {{registrationErrorReason}}. If you think this is wrong, contact the Head TA!</div>
 		{{/if}}
 		<form class="form-uni">
 			<div class="form-group">

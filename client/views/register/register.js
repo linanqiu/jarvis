@@ -31,6 +31,9 @@ Template.RegisterRegisterJumbotron.events({
 				}
 			}
 		});
+	},
+	'change #scoreboard-optin': function (event) {
+		Meteor.call('changeScoreboardOptIn', Session.get('state'), event.target.checked);
 	}
 });
 

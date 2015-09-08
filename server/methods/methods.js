@@ -11,7 +11,17 @@ Meteor.methods({
     States.insert({
       state: state,
       uni: uni,
+      scoreboardOptIn: true,
       createdAt: new Date()
+    });
+  },
+  'changeScoreboardOptIn': function (state, scoreboardOptIn) {
+    States.update({
+      state: state
+    }, {
+      $set: {
+        scoreboardOptIn: scoreboardOptIn
+      }
     });
   },
   'checkUniExists': function (uni) {
@@ -44,6 +54,14 @@ Meteor.methods({
   'receiveWebhook': function (body) {
     console.log('Method called');
     extractGrades(body);
+  },
+  'signupProgress': function (state) {
+    var student = Students.findOne({
+      state: state
+    });
+    if (typeof student !== 'undefined') {
+      return student.signupProgress;
+    }
   }
 });
 
@@ -108,8 +126,13 @@ function requestAccessToken(state, code) {
       githubUsername: login,
       accessToken: accessToken,
       homeworks: {},
-      nickname: randomPokemon(),
-      email: foundState.uni + '@columbia.edu'
+      nickname: randomName(),
+      email: foundState.uni + '@columbia.edu',
+      signupProgress: '1. Student created',
+      scoreboardOptIn: States.findOne({
+        state: state
+      }).scoreboardOptIn,
+      state: state
     }
   });
 
@@ -124,12 +147,13 @@ function createTeams(student) {
     version: '3.0.0'
   });
 
-  console.log('Authenticating using user token');
+  console.log('Authenticating using admin token');
   // authenticate using the admin's own GitHub token
   github.authenticate({
     type: 'oauth',
     token: Meteor.settings.token
   });
+  updateProgress(student, '2. Authenticated using admin token');
 
   console.log('Adding to students team');
   // add to all students team
@@ -139,6 +163,7 @@ function createTeams(student) {
     id: '1704354',
     user: student.githubUsername
   });
+  updateProgress(student, '3. Added to students team');
 
   console.log('Creating student own team');
   // create student's own team
@@ -149,6 +174,7 @@ function createTeams(student) {
     name: 'student-' + student.uni,
     permission: 'push'
   });
+  updateProgress(student, '4. Created student own team');
 
   console.log('Recording team id');
   // record team id in db
@@ -161,6 +187,7 @@ function createTeams(student) {
       teamId: teamId
     }
   });
+  updateProgress(student, '5. Recorded team id');
 
   console.log('Adding to student own team');
   // add student to his own team
@@ -168,6 +195,7 @@ function createTeams(student) {
     id: teamId,
     user: student.githubUsername
   });
+  updateProgress(student, '6. Added to student own team');
 
   console.log('Create homework repo');
   // create homework submission repo for student where only his team has access (plus admins)
@@ -182,6 +210,7 @@ function createTeams(student) {
     team_id: teamId,
     auto_init: true
   });
+  updateProgress(student, '7. Created homework repo');
 
   return addCiBuild(student);
 }
@@ -200,6 +229,7 @@ function addCiBuild(student) {
       'Accept': 'application/json'
     }
   });
+  updateProgress(student, '8. Added build to CI');
 
   console.log('Enabling project');
   // enable project by making CircleCI add deploy key to repo
@@ -210,6 +240,7 @@ function addCiBuild(student) {
       'Accept': 'application/json'
     }
   });
+  updateProgress(student, '9. Enabled project');
 
   console.log('Following project');
   // makes the admin follow the project
@@ -220,12 +251,14 @@ function addCiBuild(student) {
       'Accept-Encoding': 'identity'
     }
   });
+  updateProgress(student, '10. Followed project');
 
   console.log('Sending email');
   // sends success email
   sendEmail('registerSuccess', student.email, {
     student: student
   });
+  updateProgress(student, '11. Sent email');
 
   return true;
 }
@@ -350,4 +383,14 @@ function sendEmail(templateToUse, toEmail, data) {
       text: JSON.stringify(data.grades, null, 2)
     });
   }
+}
+
+function updateProgress(student, progressMessage) {
+  Students.update({
+    _id: student._id
+  }, {
+    $set: {
+      signupProgress: progressMessage
+    }
+  });
 }

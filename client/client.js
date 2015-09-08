@@ -10,10 +10,6 @@ Meteor.startup(function () {
 	Meteor.call('getClientId', function (err, resp) {
 		Session.set('clientId', resp);
 	});
-
-	Meteor.call('getState', function (err, resp) {
-		Session.set('state', resp);
-	});
 });
 
 this.menuItemClass = function (routeName) {
