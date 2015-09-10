@@ -35,6 +35,12 @@ Router.map(function () {
 		path: "/",
 		controller: "HomeController"
 	});
+	this.route("adminRegister", {
+		path: '/admin_register'
+	});
+	this.route("about", {
+		path: '/about'
+	});
 });
 
 Router.route('/github', function () {

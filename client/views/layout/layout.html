@@ -22,7 +22,42 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+
+	<style type="text/css">
+	  /* Sticky footer styles
+	  -------------------------------------------------- */
+	  html,
+	  body {
+	    height: 100%;
+	    /* The html and body elements cannot have any padding or margin. */
+	  }
+	  /* Wrapper for page content to push down footer */
+	  #wrap {
+	    min-height: 100%;
+	    height: auto !important;
+	    height: 100%;
+	    /* Negative indent footer by it's height */
+	    margin: 0 auto -60px;
+	  }
+	  /* Set the fixed height of the footer here */
+	  #push,
+	  #footer {
+	    height: 60px;
+	  }
+	  /* Lastly, apply responsive CSS fixes as necessary */
+	  @media (max-width: 767px) {
+	    #footer {
+	      margin-left: -20px;
+	      margin-right: -20px;
+	      padding-left: 20px;
+	      padding-right: 20px;
+	    }
+	  }
+  </style>
 </head>
+
+
+
 <template name="layout">
 {{> FreeLayout}}
 </template>
@@ -56,9 +91,11 @@
 	{{> yield}}
 </div>
 <div id="footer" class="sticky-footer">
+	<hr>
 	<div class="footer-container container">
-		<p class="text-muted">
-		</p>
+		<p class="text-muted text-center">
+			Developed and maintained with love (and food) by <a href="https://github.com/linanqiu">@linanqiu</a>.</p>
+		<p class="text-muted text-center">For the best students in the world.</p>
 	</div>
 </div>
 </template>
@@ -75,6 +112,13 @@
 		<a href="{{pathFor 'scoreboard'}}">
 			<span class="item-title">
 				Scoreboard
+			</span>
+		</a>
+	</li>
+		<li id="menu-item-simple" class="{{menuItemClass 'about'}}">
+		<a href="{{pathFor 'about'}}">
+			<span class="item-title">
+				About
 			</span>
 		</a>
 	</li>

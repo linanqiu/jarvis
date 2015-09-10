@@ -17,7 +17,7 @@ Template.RegisterRegisterJumbotron.rendered = function () {
 Template.RegisterRegisterJumbotron.events({
 	'submit .form-uni': function (event) {
 		event.preventDefault();
-		var uni = event.target.uniTextInput.value;
+		var uni = event.target.uniTextInput.value.toLowerCase();
 		Meteor.call('checkUniExists', uni, function (err, uniVerified) {
 			if (err) {
 				Session.set('registrationErrorReason', err.reason);
