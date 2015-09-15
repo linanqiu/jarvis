@@ -1,0 +1,3193 @@
+[34m[1m
+Meteor Up: Production Quality Meteor Deployments[22m[39m
+[34m[1m------------------------------------------------
+[22m[39m
+[52.5.214.234] Received webhook
+Method called
+Extracting grades
+{
+  "payload": {
+    "compare": "https://github.com/cs3134/homework-wt2237/compare/220bc7d664ca...c7ad1b5d0738",
+    "previous_successful_build": {
+      "build_num": 3,
+      "status": "success",
+      "build_time_millis": 46650
+    },
+    "build_parameters": null,
+    "oss": false,
+    "committer_date": "2015-09-15T03:22:56-04:00",
+    "steps": [
+      {
+        "name": "Starting the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Starting the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:05.907Z",
+            "type": "infrastructure",
+            "messages": [],
+            "start_time": "2015-09-15T07:23:04.954Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 0,
+            "run_time_millis": 953,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Start container",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Start container",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:09.751Z",
+            "source": "config",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/e486c55c8fd40d7f957c7f55-cs3134-homework-wt2237-1-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=PmSb2fPQc1n822Vo0uiyjUUQWbo%3D",
+            "start_time": "2015-09-15T07:23:05.916Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 1,
+            "run_time_millis": 3835,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Enable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Enable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:10.818Z",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/f486c55c8fd40d7fd57c7f55-cs3134-homework-wt2237-2-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=0Kx7n8tZxtllByst%2BDdMWw1d1yw%3D",
+            "start_time": "2015-09-15T07:23:09.764Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 2,
+            "run_time_millis": 1054,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore source cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore source cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:11.985Z",
+            "source": "cache",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/0586c55c8fd40d7fe57c7f55-cs3134-homework-wt2237-3-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=B6hAjM06OaHLgXlOh%2BcSiOiMy6k%3D",
+            "start_time": "2015-09-15T07:23:10.835Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 3,
+            "run_time_millis": 1150,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Checkout using deploy key: 44:dd:d5:d6:e0:31:9b:62:48:c4:f0:77:6d:3b:c3:29",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Checkout using deploy key: 44:dd:d5:d6:e0:31:9b:62:48:c4:f0:77:6d:3b:c3:29",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:14.075Z",
+            "source": "config",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/1586c55c8fd40d7ff57c7f55-cs3134-homework-wt2237-4-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=XIAhX9HsTAgumpBJdDNyiiHJvtc%3D",
+            "start_time": "2015-09-15T07:23:11.999Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 4,
+            "run_time_millis": 2076,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Configure the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Configure the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:14.169Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "start_time": "2015-09-15T07:23:14.091Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 5,
+            "run_time_millis": 78,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Setting Java version to Oracle 8",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Setting Java version to Oracle 8",
+            "bash_command": "update-alternatives --set java /usr/lib/jvm/jdk1.8.0/bin/java\nupdate-alternatives --set javac /usr/lib/jvm/jdk1.8.0/bin/javac\n",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:26.530Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/3586c55c8fd40d7f267c7f55-cs3134-homework-wt2237-6-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=BncuOguG698iy%2BFy4thsMn3wvWk%3D",
+            "start_time": "2015-09-15T07:23:14.179Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 6,
+            "run_time_millis": 12351,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Exporting JAVA_HOME",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Exporting JAVA_HOME",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:27.073Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/7586c55c8fd40d7fe67c7f55-cs3134-homework-wt2237-7-0?AWSAccessKeyId=AKIAIX2QAU[52.5.214.234] OBNMZYUAEA&Expires=1600154636&Signature=L2DMeesXQ%2BD16EmRWneV2jHmsY0%3D",
+            "start_time": "2015-09-15T07:23:26.546Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 7,
+            "run_time_millis": 527,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:29.856Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/8586c55c8fd40d7ff67c7f55-cs3134-homework-wt2237-8-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=4IFaAeIbGJG%2F9u44qXk1weWGrPc%3D",
+            "start_time": "2015-09-15T07:23:27.088Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 8,
+            "run_time_millis": 2768,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Save cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Save cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:40.007Z",
+            "source": "cache",
+            "type": "database",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/9586c55c8fd40d7f177c7f55-cs3134-homework-wt2237-9-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=ViAjUMD7iivUNetc8gJPfHZne7I%3D",
+            "start_time": "2015-09-15T07:23:29.869Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 9,
+            "run_time_millis": 10138,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "git clone https://github.com/cs3134/grader.git",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "git clone https://github.com/cs3134/grader.git",
+            "bash_command": "git clone https://github.com/cs3134/grader.git",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:40.772Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/b586c55c8fd40d7fc77c7f55-cs3134-homework-wt2237-10-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=0ZWx%2FrTbNpGFaWgaSc%2BIZLTNf20%3D",
+            "start_time": "2015-09-15T07:23:40.043Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 10,
+            "run_time_millis": 729,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "cp grader/src/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/src/* ./",
+            "bash_command": "cp grader/src/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:41.319Z",
+            "source": "config",
+            "type": "test",
+            "mes[52.5.214.234] sages": [],
+            "start_time": "2015-09-15T07:23:40.791Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 11,
+            "run_time_millis": 528,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/lib/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/lib/* ./",
+            "bash_command": "cp grader/lib/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:41.856Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T07:23:41.328Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 12,
+            "run_time_millis": 528,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/grade.sh ./grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/grade.sh ./grade.sh",
+            "bash_command": "cp grader/grade.sh ./grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:42.393Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T07:23:41.865Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 13,
+            "run_time_millis": 528,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/config.prop ./config.prop",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/config.prop ./config.prop",
+            "bash_command": "cp grader/config.prop ./config.prop",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:42.931Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T07:23:42.403Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 14,
+            "run_time_millis": 528,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "sh grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "sh grade.sh",
+            "bash_command": "sh grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:49.278Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/0686c55c8fd40d7fe77c7f55-cs3134-homework-wt2237-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=592SLrz%2F0v9jVoPXIcU26huW7Cs%3D",
+            "start_time": "2015-09-15T07:23:42.940Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 15,
+            "run_time_millis": 6338,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Collect test metadata (experimental).",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fa[52.5.214.234] il": null,
+            "name": "Collect test metadata (experimental).",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:50.870Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T07:23:49.290Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 16,
+            "run_time_millis": 1580,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Collect artifacts",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect artifacts",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:55.292Z",
+            "type": "teardown",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/4686c55c8fd40d7f687c7f55-cs3134-homework-wt2237-17-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=DMvC%2BGu9hJWBXEOmaTtmQCWBW2c%3D",
+            "start_time": "2015-09-15T07:23:50.879Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 17,
+            "run_time_millis": 4413,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Disable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Disable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T07:23:55.314Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T07:23:55.305Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 20,
+            "run_time_millis": 9,
+            "has_output": false
+          }
+        ]
+      }
+    ],
+    "body": "",
+    "usage_queued_at": "2015-09-15T07:23:05.060Z",
+    "retry_of": null,
+    "reponame": "homework-wt2237",
+    "ssh_users": [],
+    "build_url": "https://circleci.com/gh/cs3134/homework-wt2237/4",
+    "parallel": 1,
+    "failed": null,
+    "branch": "master",
+    "username": "cs3134",
+    "author_date": "2015-09-15T03:22:56-04:00",
+    "why": "github",
+    "user": {
+      "is_user": false,
+      "login": "heathertzou",
+      "email": "heather.tzou@gmail.com"
+    },
+    "vcs_revision": "c7ad1b5d0738d3b5e8545537dfdbc1cb2b550d4c",
+    "owners": [],
+    "vcs_tag": null,
+    "build_num": 4,
+    "infrastructure_fail": false,
+    "ssh_enabled": false,
+    "committer_email": "heather.tzou@gmail.com",
+    "previous": {
+      "build_num": 3,
+      "status": "success",
+      "build_time_millis": 46650
+    },
+    "status": "success",
+    "committer_name": "WEN-TING TZOU",
+    "pull_request_urls": [],
+    "retries": null,
+    "subject": "i think homework 0 is completed",
+    "timedout": false,
+    "dont_build": null,
+    "lifecycle": "finished",
+    "stop_time": "2015-09-15T07:23:55.515Z",
+    "build_time_millis": 51060,
+    "circle_yml": {
+      "string": "## Customize the test machine\nmachine:\n  # Version of java to use\n  java:\n    version: oraclejdk8\n\n## Customize test commands\ntest:\n  pre:\n    - git clone https://github.com/cs3134/grader.git\n    - cp grader/src/* ./\n    - cp grader/lib/* ./\n    - cp grader/grade.sh ./grade.sh\n    - cp grader/config.prop ./config.prop\n  override:\n    - sh grade.sh\n\nnotify:\n  webhooks:\n    - url: http://jarvis.xyz/webhook/ci\n"
+    },
+    "messages": [],
+    "is_first_green_build": false,
+    "job_name": null,
+ [52.5.214.234]    "start_time": "2015-09-15T07:23:04.455Z",
+    "canceler": null,
+    "all_commit_details": [
+      {
+        "committer_date": "2015-09-15T03:22:56-04:00",
+        "body": "",
+        "branch": "master",
+        "author_date": "2015-09-15T03:22:56-04:00",
+        "committer_email": "heather.tzou@gmail.com",
+        "commit": "c7ad1b5d0738d3b5e8545537dfdbc1cb2b550d4c",
+        "committer_login": "heathertzou",
+        "committer_name": "WEN-TING TZOU",
+        "subject": "i think homework 0 is completed",
+        "commit_url": "https://github.com/cs3134/homework-wt2237/commit/c7ad1b5d0738d3b5e8545537dfdbc1cb2b550d4c",
+        "author_login": "heathertzou",
+        "author_name": "WEN-TING TZOU",
+        "author_email": "heather.tzou@gmail.com"
+      }
+    ],
+    "outcome": "success",
+    "vcs_url": "https://github.com/cs3134/homework-wt2237",
+    "author_name": "WEN-TING TZOU",
+    "node": [
+      {
+        "public_ip_addr": "23.20.76.81",
+        "port": 64708,
+        "username": "ubuntu",
+        "image_id": "circletar-1092-63dd7-20150819T174634Z",
+        "ssh_enabled": null
+      }
+    ],
+    "queued_at": "2015-09-15T07:23:04.349Z",
+    "canceled": false,
+    "author_email": "heather.tzou@gmail.com"
+  }
+}
+Found grade.sh
+https://circle-production-action-output.s3.amazonaws.com/0686c55c8fd40d7fe77c7f55-cs3134-homework-wt2237-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600154636&Signature=592SLrz%2F0v9jVoPXIcU26huW7Cs%3D
+<Buffer 1f 8b 08 00 00 00 00 00 00 00 5d 90 cd 0e 82 30 10 84 5f 85 ec 49 13 30 05 24 84 de 4d d4 04 2f 78 92 7a 68 b0 51 a2 50 d2 16 91 10 df dd e5 27 68 3c ee ...>
+Unzipping output
+{ homeworkName: 'hw0',
+  studentScore: 0,
+  errorMessage: '',
+  className: 'cs3134',
+  sections: 
+   [ { sectionName: 'Jarvis3134: sayHi()',
+       sectionScoreMax: 100,
+       sectionScoreStudent: 0,
+       sectionErrorMessage: 'Incorrect output' } ],
+  studentMax: 100 }
+Sending webhookGrades email
+Checking uni
+Getting access token
+Finding valid states
+Getting github data
+Getting our data
+Creating student in db
+Authenticating using admin token
+Adding to students team
+Creating student own team
+Recording team id
+Adding to student own team
+Create homework repo
+Add build to CI
+Enabling project
+Following project
+Sending email
+Sending registerSuccess email
+Received webhook
+Method called
+Extracting grades
+{
+  "payload": {
+    "compare": "https://github.com/cs3134/homework-ml3806/compare/edd8911fcf40...09b4c4396641",
+    "previous_successful_build": {
+      "build_num": 5,
+      "status": "success",
+      "build_time_millis": 35787
+    },
+    "build_parameters": null,
+    "oss": false,
+    "committer_date": "2015-09-15T09:18:39-04:00",
+    "steps": [
+      {
+        "name": "Starting the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Starting the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:18:47.372Z",
+            "type": "infrastructure",
+            "messages": [],
+            "start_time": "2015-09-15T13:18:47.152Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 0,
+            "run_time_millis": 220,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Start container",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Start container",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:18:51.383Z",
+            "source": "config",
+            "type": "infrastructur[52.5.214.234] e",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/e6afef4c2cf50d7f7ba18f55-cs3134-homework-ml3806-1-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=RGeqlHruhdYriZj78MVTgi0L94Y%3D",
+            "start_time": "2015-09-15T13:18:47.377Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 1,
+            "run_time_millis": 4006,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Enable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Enable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:18:52.440Z",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/f6afef4c2cf50d7fbba18f55-cs3134-homework-ml3806-2-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=wKYUgN0EnvRYEUMA0J8BXbB0UpM%3D",
+            "start_time": "2015-09-15T13:18:51.389Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 2,
+            "run_time_millis": 1051,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore source cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore source cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:18:53.496Z",
+            "source": "cache",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/07afef4c2cf50d7fcba18f55-cs3134-homework-ml3806-3-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=JLI4840oTxBbF8vkS8SCcUCNb9Q%3D",
+            "start_time": "2015-09-15T13:18:52.449Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 3,
+            "run_time_millis": 1047,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Checkout using deploy key: c6:c8:24:6e:6d:33:11:d5:c1:ef:25:6f:ac:6d:30:b0",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Checkout using deploy key: c6:c8:24:6e:6d:33:11:d5:c1:ef:25:6f:ac:6d:30:b0",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:18:55.278Z",
+            "source": "config",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/27afef4c2cf50d7fdba18f55-cs3134-homework-ml3806-4-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=9RJjx%2BhZClZ6e8oR9j24roZN7qE%3D",
+            "start_time": "2015-09-15T13:18:53.503Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 4,
+            "run_time_millis": 1775,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Configure the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Configure the build",
+            "bash_command": null,
+            "status": "success",
+            "tim[52.5.214.234] edout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:18:55.358Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "start_time": "2015-09-15T13:18:55.284Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 5,
+            "run_time_millis": 74,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Setting Java version to Oracle 8",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Setting Java version to Oracle 8",
+            "bash_command": "update-alternatives --set java /usr/lib/jvm/jdk1.8.0/bin/java\nupdate-alternatives --set javac /usr/lib/jvm/jdk1.8.0/bin/javac\n",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:01.443Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/57afef4c2cf50d7ffba18f55-cs3134-homework-ml3806-6-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=vAvp12RrH%2BYsdW2PmAzLSVjCgEU%3D",
+            "start_time": "2015-09-15T13:18:55.363Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 6,
+            "run_time_millis": 6080,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Exporting JAVA_HOME",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Exporting JAVA_HOME",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:01.975Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/97afef4c2cf50d7f5ca18f55-cs3134-homework-ml3806-7-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=5ag5XJGNsQYzVAliOWRbNJdwBq8%3D",
+            "start_time": "2015-09-15T13:19:01.450Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 7,
+            "run_time_millis": 525,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:04.744Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/a7afef4c2cf50d7f5ca18f55-cs3134-homework-ml3806-8-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=c3lgikSVdBT%2BwtRTxa36ehyRtsQ%3D",
+            "start_time": "2015-09-15T13:19:01.983Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 8,
+            "run_time_millis": 2761,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Save cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Save cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+          [52.5.214.234]   "continue": null,
+            "end_time": "2015-09-15T13:19:06.156Z",
+            "source": "cache",
+            "type": "database",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/d7afef4c2cf50d7f8ca18f55-cs3134-homework-ml3806-9-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=6PwN0%2B%2FA0zJUIQpQjpuyKJM0eDU%3D",
+            "start_time": "2015-09-15T13:19:04.750Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 9,
+            "run_time_millis": 1406,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "git clone https://github.com/cs3134/grader.git",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "git clone https://github.com/cs3134/grader.git",
+            "bash_command": "git clone https://github.com/cs3134/grader.git",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:06.889Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/f7afef4c2cf50d7faca18f55-cs3134-homework-ml3806-10-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=Awu09%2FVx10CRSxZLUB37YhfQMRU%3D",
+            "start_time": "2015-09-15T13:19:06.164Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 10,
+            "run_time_millis": 725,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "cp grader/src/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/src/* ./",
+            "bash_command": "cp grader/src/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:07.422Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:19:06.898Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 11,
+            "run_time_millis": 524,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/lib/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/lib/* ./",
+            "bash_command": "cp grader/lib/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:07.951Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:19:07.426Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 12,
+            "run_time_millis": 525,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/grade.sh ./grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/grade.sh ./grade.sh",
+            "bash_command": "cp grader/grade.sh ./grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:08.480Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:19:0[52.5.214.234] 7.956Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 13,
+            "run_time_millis": 524,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/config.prop ./config.prop",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/config.prop ./config.prop",
+            "bash_command": "cp grader/config.prop ./config.prop",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:10.210Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:19:08.485Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 14,
+            "run_time_millis": 1725,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "sh grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "sh grade.sh",
+            "bash_command": "sh grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:13.044Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/58afef4c2cf50d7feca18f55-cs3134-homework-ml3806-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=fyuPIChKXmj%2BTiGUrH6LVz4ID74%3D",
+            "start_time": "2015-09-15T13:19:10.215Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 15,
+            "run_time_millis": 2829,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Collect test metadata (experimental).",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect test metadata (experimental).",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:14.631Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T13:19:13.051Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 16,
+            "run_time_millis": 1580,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Collect artifacts",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect artifacts",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:19.058Z",
+            "type": "teardown",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/98afef4c2cf50d7f2da18f55-cs3134-homework-ml3806-17-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=1XR6UWgp2H%2B%2FC24gwsW6M8O25dA%3D",
+            "start_time": "2015-09-15T13:19:14.637Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 17,
+            "run_time_millis": 4421,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Disable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "pa[52.5.214.234] rallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Disable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:19:19.069Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T13:19:19.065Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 20,
+            "run_time_millis": 4,
+            "has_output": false
+          }
+        ]
+      }
+    ],
+    "body": "",
+    "usage_queued_at": "2015-09-15T13:18:45.352Z",
+    "retry_of": null,
+    "reponame": "homework-ml3806",
+    "ssh_users": [],
+    "build_url": "https://circleci.com/gh/cs3134/homework-ml3806/6",
+    "parallel": 1,
+    "failed": null,
+    "branch": "master",
+    "username": "cs3134",
+    "author_date": "2015-09-15T09:18:39-04:00",
+    "why": "github",
+    "user": {
+      "is_user": false,
+      "login": "anitamengzhuolu",
+      "email": "ml3806@columbia.edu"
+    },
+    "vcs_revision": "09b4c4396641ef48dbb7304559c232f4a3a9a94c",
+    "owners": [],
+    "vcs_tag": null,
+    "build_num": 6,
+    "infrastructure_fail": false,
+    "ssh_enabled": false,
+    "committer_email": "ml3806@columbia.edu",
+    "previous": {
+      "build_num": 5,
+      "status": "success",
+      "build_time_millis": 35787
+    },
+    "status": "success",
+    "committer_name": "anitamengzhuolu",
+    "pull_request_urls": [],
+    "retries": null,
+    "subject": "homework 0 completed",
+    "timedout": false,
+    "dont_build": null,
+    "lifecycle": "finished",
+    "stop_time": "2015-09-15T13:19:19.252Z",
+    "build_time_millis": 32591,
+    "circle_yml": {
+      "string": "## Customize the test machine\nmachine:\n  # Version of java to use\n  java:\n    version: oraclejdk8\n\n## Customize test commands\ntest:\n  pre:\n    - git clone https://github.com/cs3134/grader.git\n    - cp grader/src/* ./\n    - cp grader/lib/* ./\n    - cp grader/grade.sh ./grade.sh\n    - cp grader/config.prop ./config.prop\n  override:\n    - sh grade.sh\n\nnotify:\n  webhooks:\n    - url: http://jarvis.xyz/webhook/ci\n"
+    },
+    "messages": [],
+    "is_first_green_build": false,
+    "job_name": null,
+    "start_time": "2015-09-15T13:18:46.661Z",
+    "canceler": null,
+    "all_commit_details": [
+      {
+        "committer_date": "2015-09-15T09:18:39-04:00",
+        "body": "",
+        "branch": "master",
+        "author_date": "2015-09-15T09:18:39-04:00",
+        "committer_email": "ml3806@columbia.edu",
+        "commit": "09b4c4396641ef48dbb7304559c232f4a3a9a94c",
+        "committer_login": "anitamengzhuolu",
+        "committer_name": "anitamengzhuolu",
+        "subject": "homework 0 completed",
+        "commit_url": "https://github.com/cs3134/homework-ml3806/commit/09b4c4396641ef48dbb7304559c232f4a3a9a94c",
+        "author_login": "anitamengzhuolu",
+        "author_name": "anitamengzhuolu",
+        "author_email": "ml3806@columbia.edu"
+      }
+    ],
+    "outcome": "success",
+    "vcs_url": "https://github.com/cs3134/homework-ml3806",
+    "author_name": "anitamengzhuolu",
+    "node": [
+      {
+        "public_ip_addr": "54.157.40.201",
+        "port": 64660,
+        "username": "ubuntu",
+        "image_id": "circletar-1092-63dd7-20150819T174634Z",
+        "ssh_enabled": null
+      }
+    ],
+    "queued_at": "2015-09-15T13:18:46.621Z",
+    "canceled": false,
+    "author_email": "ml3806@columbia.edu"
+  }
+}
+Found grade.sh
+https://circle-production-action-output.s3.amazonaws.com/58afef4c2cf50d7feca18f55-cs3134-homework-ml3806-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600175959&Signature=fyuPIChKXmj%2BTiGUrH6LVz4ID74%3D
+<Buffer 1f 8b 08 00 00 00 00 00 00 00 5d 90 c1 0e 82 30 10 44 7f 85 ec 49 13 30 2d c8 c1 de 4d d4 04 2f 78 d2 7a 68 b0 d1 46 a1 a4 2d 22 21 fe bb 0b 18 34 1c 77 ...>
+Unzipping output
+{ homeworkName: 'hw0',
+  studentScore: 0,
+  errorMessage: '',
+  cla[52.5.214.234] ssName: 'cs3134',
+  sections: 
+   [ { sectionName: 'Jarvis3134: sayHi()',
+       sectionScoreMax: 100,
+       sectionScoreStudent: 0,
+       sectionErrorMessage: 'Incorrect output' } ],
+  studentMax: 100 }
+Sending webhookGrades email
+Received webhook
+Method called
+Extracting grades
+{
+  "payload": {
+    "compare": "https://github.com/cs3134/homework-ml3806/compare/d1104a101be5...55a230baf14f",
+    "previous_successful_build": {
+      "build_num": 7,
+      "status": "success",
+      "build_time_millis": 38372
+    },
+    "build_parameters": null,
+    "oss": false,
+    "committer_date": "2015-09-15T09:25:32-04:00",
+    "steps": [
+      {
+        "name": "Starting the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Starting the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:40.298Z",
+            "type": "infrastructure",
+            "messages": [],
+            "start_time": "2015-09-15T13:25:39.445Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 0,
+            "run_time_millis": 853,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Start container",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Start container",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:44.045Z",
+            "source": "config",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/ac65948b77700d7f45c18f55-cs3134-homework-ml3806-1-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=P0q3hWDSjYZkpPo3dgCzKyTA4DE%3D",
+            "start_time": "2015-09-15T13:25:40.305Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 1,
+            "run_time_millis": 3740,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Enable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Enable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:45.111Z",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/dc65948b77700d7f85c18f55-cs3134-homework-ml3806-2-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=8CBj0ivNfz5z2lxD8SjIxiIitKE%3D",
+            "start_time": "2015-09-15T13:25:44.056Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 2,
+            "run_time_millis": 1055,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore source cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore source cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:46.172Z",
+            "source": "cache",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circ[52.5.214.234] le-production-action-output.s3.amazonaws.com/ec65948b77700d7f95c18f55-cs3134-homework-ml3806-3-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=hBNd2JUbWs2Lz6%2FV%2BtGW%2FggTqsc%3D",
+            "start_time": "2015-09-15T13:25:45.124Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 3,
+            "run_time_millis": 1048,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Checkout using deploy key: c6:c8:24:6e:6d:33:11:d5:c1:ef:25:6f:ac:6d:30:b0",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Checkout using deploy key: c6:c8:24:6e:6d:33:11:d5:c1:ef:25:6f:ac:6d:30:b0",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:48.063Z",
+            "source": "config",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/0d65948b77700d7fa5c18f55-cs3134-homework-ml3806-4-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=DJP60rqxg2iNZWgfVYbkE8Kmwg4%3D",
+            "start_time": "2015-09-15T13:25:46.182Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 4,
+            "run_time_millis": 1881,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Configure the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Configure the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:48.136Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "start_time": "2015-09-15T13:25:48.075Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 5,
+            "run_time_millis": 61,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Setting Java version to Oracle 8",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Setting Java version to Oracle 8",
+            "bash_command": "update-alternatives --set java /usr/lib/jvm/jdk1.8.0/bin/java\nupdate-alternatives --set javac /usr/lib/jvm/jdk1.8.0/bin/javac\n",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:54.348Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/2d65948b77700d7fc5c18f55-cs3134-homework-ml3806-6-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=eafgS9op4QK5SVIC5vUvKT1DL1c%3D",
+            "start_time": "2015-09-15T13:25:48.145Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 6,
+            "run_time_millis": 6203,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Exporting JAVA_HOME",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Exporting JAVA_HOME",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:54.883Z",
+            "s[52.5.214.234] ource": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/3d65948b77700d7f26c18f55-cs3134-homework-ml3806-7-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=Hmw3%2ButCzwYxEsLQ6rgD1naZPlE%3D",
+            "start_time": "2015-09-15T13:25:54.357Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 7,
+            "run_time_millis": 526,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:57.661Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/4d65948b77700d7f26c18f55-cs3134-homework-ml3806-8-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=wLODsn%2FqNDoYeqReh1QtSMmebzA%3D",
+            "start_time": "2015-09-15T13:25:54.892Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 8,
+            "run_time_millis": 2769,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Save cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Save cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:58.844Z",
+            "source": "cache",
+            "type": "database",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/7d65948b77700d7f56c18f55-cs3134-homework-ml3806-9-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=Xm7QGVEyeggjkFTrCPIRkGs5Q3E%3D",
+            "start_time": "2015-09-15T13:25:57.680Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 9,
+            "run_time_millis": 1164,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "git clone https://github.com/cs3134/grader.git",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "git clone https://github.com/cs3134/grader.git",
+            "bash_command": "git clone https://github.com/cs3134/grader.git",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:25:59.589Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/8d65948b77700d7f66c18f55-cs3134-homework-ml3806-10-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=h7DQcMXj1x2Zs6Yvo4EmZMKkoKY%3D",
+            "start_time": "2015-09-15T13:25:58.858Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 10,
+            "run_time_millis": 731,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "cp grader/src/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/src/* ./",
+            "bash_command": "cp grader/src[52.5.214.234] /* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:26:00.126Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:25:59.599Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 11,
+            "run_time_millis": 527,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/lib/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/lib/* ./",
+            "bash_command": "cp grader/lib/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:26:00.661Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:26:00.135Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 12,
+            "run_time_millis": 526,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/grade.sh ./grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/grade.sh ./grade.sh",
+            "bash_command": "cp grader/grade.sh ./grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:26:01.197Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:26:00.670Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 13,
+            "run_time_millis": 527,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/config.prop ./config.prop",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/config.prop ./config.prop",
+            "bash_command": "cp grader/config.prop ./config.prop",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:26:01.730Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:26:01.203Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 14,
+            "run_time_millis": 527,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "sh grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "sh grade.sh",
+            "bash_command": "sh grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:26:05.470Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/dd65948b77700d7f96c18f55-cs3134-homework-ml3806-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=MQXrBMEh6o4yNnumk43sYuFPAbE%3D",
+            "start_time": "2015-09-15T13:26:01.736Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 15,
+            "run_time_millis": 3734,
+            "has_output": true
+          }
+        ]
+      },
+      {
+       [52.5.214.234]  "name": "Collect test metadata (experimental).",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect test metadata (experimental).",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:26:07.160Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T13:26:05.479Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 16,
+            "run_time_millis": 1681,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Collect artifacts",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect artifacts",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:26:11.662Z",
+            "type": "teardown",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/fd65948b77700d7ff6c18f55-cs3134-homework-ml3806-17-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=WOHtaivdL%2BE8vKMtmaSIVhhIUnY%3D",
+            "start_time": "2015-09-15T13:26:07.166Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 17,
+            "run_time_millis": 4496,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Disable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Disable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:26:11.677Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T13:26:11.670Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 20,
+            "run_time_millis": 7,
+            "has_output": false
+          }
+        ]
+      }
+    ],
+    "body": "",
+    "usage_queued_at": "2015-09-15T13:25:36.759Z",
+    "retry_of": null,
+    "reponame": "homework-ml3806",
+    "ssh_users": [],
+    "build_url": "https://circleci.com/gh/cs3134/homework-ml3806/8",
+    "parallel": 1,
+    "failed": null,
+    "branch": "master",
+    "username": "cs3134",
+    "author_date": "2015-09-15T09:25:32-04:00",
+    "why": "github",
+    "user": {
+      "is_user": false,
+      "login": "anitamengzhuolu",
+      "email": "ml3806@columbia.edu"
+    },
+    "vcs_revision": "55a230baf14f68aa098100d45941f16a7f05c00a",
+    "owners": [],
+    "vcs_tag": null,
+    "build_num": 8,
+    "infrastructure_fail": false,
+    "ssh_enabled": false,
+    "committer_email": "ml3806@columbia.edu",
+    "previous": {
+      "build_num": 7,
+      "status": "success",
+      "build_time_millis": 38372
+    },
+    "status": "success",
+    "committer_name": "anitamengzhuolu",
+    "pull_request_urls": [],
+    "retries": null,
+    "subject": "homework 0 completed",
+    "timedout": false,
+    "dont_build": null,
+    "lifecycle": "finished",
+    "stop_time": "2015-09-15T13:26:11.871Z",
+    "build_time_millis": 32963,
+    "circle_yml": {
+      "string": "## Customize the test machine\nmachine:\n  # Version of java to use\n  java:\n    version: oraclejdk8\n\n## Customize test commands\ntest:\n  pre:\n    - git clone https://github.com/cs3134/grader.git\n    - cp grader/src/* ./\n    - cp grader/lib/* ./\n    - cp grader/grade.sh ./grade.sh\n    - cp [52.5.214.234] grader/config.prop ./config.prop\n  override:\n    - sh grade.sh\n\nnotify:\n  webhooks:\n    - url: http://jarvis.xyz/webhook/ci\n"
+    },
+    "messages": [],
+    "is_first_green_build": false,
+    "job_name": null,
+    "start_time": "2015-09-15T13:25:38.908Z",
+    "canceler": null,
+    "all_commit_details": [
+      {
+        "committer_date": "2015-09-15T09:25:32-04:00",
+        "body": "",
+        "branch": "master",
+        "author_date": "2015-09-15T09:25:32-04:00",
+        "committer_email": "ml3806@columbia.edu",
+        "commit": "55a230baf14f68aa098100d45941f16a7f05c00a",
+        "committer_login": "anitamengzhuolu",
+        "committer_name": "anitamengzhuolu",
+        "subject": "homework 0 completed",
+        "commit_url": "https://github.com/cs3134/homework-ml3806/commit/55a230baf14f68aa098100d45941f16a7f05c00a",
+        "author_login": "anitamengzhuolu",
+        "author_name": "anitamengzhuolu",
+        "author_email": "ml3806@columbia.edu"
+      }
+    ],
+    "outcome": "success",
+    "vcs_url": "https://github.com/cs3134/homework-ml3806",
+    "author_name": "anitamengzhuolu",
+    "node": [
+      {
+        "public_ip_addr": "54.161.195.169",
+        "port": 64635,
+        "username": "ubuntu",
+        "image_id": "circletar-1092-63dd7-20150819T174634Z",
+        "ssh_enabled": null
+      }
+    ],
+    "queued_at": "2015-09-15T13:25:38.752Z",
+    "canceled": false,
+    "author_email": "ml3806@columbia.edu"
+  }
+}
+Found grade.sh
+https://circle-production-action-output.s3.amazonaws.com/dd65948b77700d7f96c18f55-cs3134-homework-ml3806-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176372&Signature=MQXrBMEh6o4yNnumk43sYuFPAbE%3D
+<Buffer 1f 8b 08 00 00 00 00 00 00 00 5d 90 cd 0e 82 30 10 84 5f c5 ec 49 13 30 2d 3f 26 f6 6e a2 26 78 c1 93 d4 43 83 8d 12 85 92 b6 88 84 f0 ee 2e 60 d0 78 dc ...>
+Unzipping output
+{ homeworkName: 'hw0',
+  studentScore: 0,
+  errorMessage: '',
+  className: 'cs3134',
+  sections: 
+   [ { sectionName: 'Jarvis3134: sayHi()',
+       sectionScoreMax: 100,
+       sectionScoreStudent: 0,
+       sectionErrorMessage: 'Incorrect output' } ],
+  studentMax: 100 }
+Sending webhookGrades email
+Received webhook
+Method called
+Extracting grades
+{
+  "payload": {
+    "compare": "https://github.com/cs3134/homework-ml3806/compare/bfba854199d8...104b94427110",
+    "previous_successful_build": {
+      "build_num": 9,
+      "status": "success",
+      "build_time_millis": 38627
+    },
+    "build_parameters": null,
+    "oss": false,
+    "committer_date": "2015-09-15T09:35:48-04:00",
+    "steps": [
+      {
+        "name": "Starting the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Starting the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:02.557Z",
+            "type": "infrastructure",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:02.028Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 0,
+            "run_time_millis": 529,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Start container",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Start container",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:06.356Z",
+            "source": "config",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/aa6f9104f1ef0d7f2ce18f55-cs3134-homework[52.5.214.234] -ml3806-1-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176996&Signature=DqVQcLHKCNg0wIzeqJJWBvd1QBo%3D",
+            "start_time": "2015-09-15T13:36:02.561Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 1,
+            "run_time_millis": 3795,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Enable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Enable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:07.415Z",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/ca6f9104f1ef0d7f6ce18f55-cs3134-homework-ml3806-2-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176996&Signature=Cc8vEou72ArWV2HOXB4WQ8v54xs%3D",
+            "start_time": "2015-09-15T13:36:06.363Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 2,
+            "run_time_millis": 1052,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore source cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore source cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:08.675Z",
+            "source": "cache",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/da6f9104f1ef0d7f7ce18f55-cs3134-homework-ml3806-3-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176996&Signature=V5h%2FH%2FWPnG13UpRGEeEJ2FYn8Zs%3D",
+            "start_time": "2015-09-15T13:36:07.425Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 3,
+            "run_time_millis": 1250,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Checkout using deploy key: c6:c8:24:6e:6d:33:11:d5:c1:ef:25:6f:ac:6d:30:b0",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Checkout using deploy key: c6:c8:24:6e:6d:33:11:d5:c1:ef:25:6f:ac:6d:30:b0",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:10.754Z",
+            "source": "config",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/ea6f9104f1ef0d7f8ce18f55-cs3134-homework-ml3806-4-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=ct7fyEu3%2Fikace2q61%2F4LEc%2Fww8%3D",
+            "start_time": "2015-09-15T13:36:08.681Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 4,
+            "run_time_millis": 2073,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Configure the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Configure the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:10.822Z",
+            "source": "cache",
+            "type":[52.5.214.234]  "machine",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:10.760Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 5,
+            "run_time_millis": 62,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Setting Java version to Oracle 8",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Setting Java version to Oracle 8",
+            "bash_command": "update-alternatives --set java /usr/lib/jvm/jdk1.8.0/bin/java\nupdate-alternatives --set javac /usr/lib/jvm/jdk1.8.0/bin/javac\n",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:16.691Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/0b6f9104f1ef0d7face18f55-cs3134-homework-ml3806-6-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=UtaIHInZ2IQ%2Bc1E26DJGndNnn8M%3D",
+            "start_time": "2015-09-15T13:36:10.826Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 6,
+            "run_time_millis": 5865,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Exporting JAVA_HOME",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Exporting JAVA_HOME",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:17.226Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/1b6f9104f1ef0d7f0de18f55-cs3134-homework-ml3806-7-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=jZyOE16aks6ETH71Q5Qp0JUqdUI%3D",
+            "start_time": "2015-09-15T13:36:16.701Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 7,
+            "run_time_millis": 525,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:19.998Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/2b6f9104f1ef0d7f1de18f55-cs3134-homework-ml3806-8-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=rKVdBAo8Av8UffFYYbDL%2FVuBTvg%3D",
+            "start_time": "2015-09-15T13:36:17.231Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 8,
+            "run_time_millis": 2767,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Save cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Save cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:20.966Z",
+            "source": "cache",
+            "type": "database",
+           [52.5.214.234]  "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/3b6f9104f1ef0d7f4de18f55-cs3134-homework-ml3806-9-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=4WLQKoa%2Fo35VYk6ZYPmo%2BHtmejI%3D",
+            "start_time": "2015-09-15T13:36:20.004Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 9,
+            "run_time_millis": 962,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "git clone https://github.com/cs3134/grader.git",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "git clone https://github.com/cs3134/grader.git",
+            "bash_command": "git clone https://github.com/cs3134/grader.git",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:21.697Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/4b6f9104f1ef0d7f4de18f55-cs3134-homework-ml3806-10-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=oEMJW23kgZuLVS3pzI%2Bk1BRjm5M%3D",
+            "start_time": "2015-09-15T13:36:20.971Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 10,
+            "run_time_millis": 726,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "cp grader/src/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/src/* ./",
+            "bash_command": "cp grader/src/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:22.229Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:21.705Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 11,
+            "run_time_millis": 524,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/lib/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/lib/* ./",
+            "bash_command": "cp grader/lib/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:22.757Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:22.233Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 12,
+            "run_time_millis": 524,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/grade.sh ./grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/grade.sh ./grade.sh",
+            "bash_command": "cp grader/grade.sh ./grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:23.285Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:22.761Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 13,
+            "run_time_millis": 524,
+            "has_ou[52.5.214.234] tput": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/config.prop ./config.prop",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/config.prop ./config.prop",
+            "bash_command": "cp grader/config.prop ./config.prop",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:23.813Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:23.289Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 14,
+            "run_time_millis": 524,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "sh grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "sh grade.sh",
+            "bash_command": "sh grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:26.659Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/ab6f9104f1ef0d7f7de18f55-cs3134-homework-ml3806-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=An%2BF%2FpMxLWIkdHyOgc4Lvj6HGtw%3D",
+            "start_time": "2015-09-15T13:36:23.817Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 15,
+            "run_time_millis": 2842,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Collect test metadata (experimental).",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect test metadata (experimental).",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:28.946Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:26.667Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 16,
+            "run_time_millis": 2279,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Collect artifacts",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect artifacts",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:35.368Z",
+            "type": "teardown",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/db6f9104f1ef0d7fcde18f55-cs3134-homework-ml3806-17-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=eaDkjgHRSgqryVwwmlWQJHYPZAs%3D",
+            "start_time": "2015-09-15T13:36:28.950Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 17,
+            "run_time_millis": 6418,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Disable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Disable SSH",
+            "bash_command": nul[52.5.214.234] l,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:35.379Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:35.374Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 20,
+            "run_time_millis": 5,
+            "has_output": false
+          }
+        ]
+      }
+    ],
+    "body": "",
+    "usage_queued_at": "2015-09-15T13:36:09.057Z",
+    "retry_of": null,
+    "reponame": "homework-ml3806",
+    "ssh_users": [],
+    "build_url": "https://circleci.com/gh/cs3134/homework-ml3806/10",
+    "parallel": 1,
+    "failed": null,
+    "branch": "master",
+    "username": "cs3134",
+    "author_date": "2015-09-15T09:35:48-04:00",
+    "why": "github",
+    "user": {
+      "is_user": false,
+      "login": "anitamengzhuolu",
+      "email": "ml3806@columbia.edu"
+    },
+    "vcs_revision": "104b944271102ba026181a8d50fa6072bb2ec544",
+    "owners": [],
+    "vcs_tag": null,
+    "build_num": 10,
+    "infrastructure_fail": false,
+    "ssh_enabled": false,
+    "committer_email": "ml3806@columbia.edu",
+    "previous": {
+      "build_num": 9,
+      "status": "success",
+      "build_time_millis": 38627
+    },
+    "status": "success",
+    "committer_name": "anitamengzhuolu",
+    "pull_request_urls": [],
+    "retries": null,
+    "subject": "homework 0 completed",
+    "timedout": false,
+    "dont_build": null,
+    "lifecycle": "finished",
+    "stop_time": "2015-09-15T13:36:35.791Z",
+    "build_time_millis": 34309,
+    "circle_yml": {
+      "string": "## Customize the test machine\nmachine:\n  # Version of java to use\n  java:\n    version: oraclejdk8\n\n## Customize test commands\ntest:\n  pre:\n    - git clone https://github.com/cs3134/grader.git\n    - cp grader/src/* ./\n    - cp grader/lib/* ./\n    - cp grader/grade.sh ./grade.sh\n    - cp grader/config.prop ./config.prop\n  override:\n    - sh grade.sh\n\nnotify:\n  webhooks:\n    - url: http://jarvis.xyz/webhook/ci\n"
+    },
+    "messages": [],
+    "is_first_green_build": false,
+    "job_name": null,
+    "start_time": "2015-09-15T13:36:01.482Z",
+    "canceler": null,
+    "all_commit_details": [
+      {
+        "committer_date": "2015-09-15T09:35:48-04:00",
+        "body": "",
+        "branch": "master",
+        "author_date": "2015-09-15T09:35:48-04:00",
+        "committer_email": "ml3806@columbia.edu",
+        "commit": "104b944271102ba026181a8d50fa6072bb2ec544",
+        "committer_login": "anitamengzhuolu",
+        "committer_name": "anitamengzhuolu",
+        "subject": "homework 0 completed",
+        "commit_url": "https://github.com/cs3134/homework-ml3806/commit/104b944271102ba026181a8d50fa6072bb2ec544",
+        "author_login": "anitamengzhuolu",
+        "author_name": "anitamengzhuolu",
+        "author_email": "ml3806@columbia.edu"
+      }
+    ],
+    "outcome": "success",
+    "vcs_url": "https://github.com/cs3134/homework-ml3806",
+    "author_name": "anitamengzhuolu",
+    "node": [
+      {
+        "public_ip_addr": "54.147.179.221",
+        "port": 64649,
+        "username": "ubuntu",
+        "image_id": "circletar-1092-63dd7-20150819T174634Z",
+        "ssh_enabled": null
+      }
+    ],
+    "queued_at": "2015-09-15T13:36:01.412Z",
+    "canceled": false,
+    "author_email": "ml3806@columbia.edu"
+  }
+}
+Found grade.sh
+https://circle-production-action-output.s3.amazonaws.com/ab6f9104f1ef0d7f7de18f55-cs3134-homework-ml3806-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600176997&Signature=An%2BF%2FpMxLWIkdHyOgc4Lvj6HGtw%3D
+<Buffer 1f 8b 08 00 00 00 00 00 00 00 5d 90 c1 0a c2 30 10 44 7f 45 f6 a4 50 25 69 6c c5 dc 05 15 ea 45 4f 1a 0f a1 06 2d da a6 24 a9 55 8a ff ee 36 95 2a 1e 77 ...>
+Unzipping output
+{ homeworkName: 'hw0',
+  studentScore: 0,
+  errorMessage: '',
+  className: 'cs3134',
+  sections: 
+   [ { sectionName: 'Jarvis3134: sayHi()',
+       sectionScoreMax: 100,
+       sectionScoreStudent: 0,
+       sec[52.5.214.234] tionErrorMessage: 'Incorrect output' } ],
+  studentMax: 100 }
+Sending webhookGrades email
+Received webhook
+Method called
+Extracting grades
+{
+  "payload": {
+    "compare": "https://github.com/cs3134/homework-ml3806/compare/104b94427110...a4d6d55d2acb",
+    "previous_successful_build": {
+      "build_num": 9,
+      "status": "success",
+      "build_time_millis": 38627
+    },
+    "build_parameters": null,
+    "oss": false,
+    "committer_date": "2015-09-15T09:36:22-04:00",
+    "steps": [
+      {
+        "name": "Starting the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Starting the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:28.767Z",
+            "type": "infrastructure",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:27.562Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 0,
+            "run_time_millis": 1205,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Start container",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Start container",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:34.619Z",
+            "source": "config",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/a402c3dd4abd0d7fcde18f55-cs3134-homework-ml3806-1-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=zy4iMjhYBJkLzoX0Rvjp3aUeRwY%3D",
+            "start_time": "2015-09-15T13:36:28.773Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 1,
+            "run_time_millis": 5846,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Enable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Enable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:35.691Z",
+            "type": "infrastructure",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/d402c3dd4abd0d7f2ee18f55-cs3134-homework-ml3806-2-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=JHZyS2dGeb2Cy2MV2zvdG6eKHUc%3D",
+            "start_time": "2015-09-15T13:36:34.623Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 2,
+            "run_time_millis": 1068,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore source cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore source cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:36.749Z",
+            "source": "cache",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/f402c3dd4abd0d7f3ee18f55-cs3134-homework-ml3806-3-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177[52.5.214.234] 024&Signature=EUSzOfy5D6f%2BdIGwDJDoLm6zh%2Fg%3D",
+            "start_time": "2015-09-15T13:36:35.697Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 3,
+            "run_time_millis": 1052,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Checkout using deploy key: c6:c8:24:6e:6d:33:11:d5:c1:ef:25:6f:ac:6d:30:b0",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Checkout using deploy key: c6:c8:24:6e:6d:33:11:d5:c1:ef:25:6f:ac:6d:30:b0",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:38.537Z",
+            "source": "config",
+            "type": "checkout",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/1502c3dd4abd0d7f4ee18f55-cs3134-homework-ml3806-4-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=535iAbrQymUQm6z5dQhgopjL424%3D",
+            "start_time": "2015-09-15T13:36:36.757Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 4,
+            "run_time_millis": 1780,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Configure the build",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Configure the build",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:38.590Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:38.541Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 5,
+            "run_time_millis": 49,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Setting Java version to Oracle 8",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Setting Java version to Oracle 8",
+            "bash_command": "update-alternatives --set java /usr/lib/jvm/jdk1.8.0/bin/java\nupdate-alternatives --set javac /usr/lib/jvm/jdk1.8.0/bin/javac\n",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:44.557Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/4502c3dd4abd0d7f6ee18f55-cs3134-homework-ml3806-6-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=RdPRN%2Bv2kOcLwKtykQXyjpbtQM0%3D",
+            "start_time": "2015-09-15T13:36:38.594Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 6,
+            "run_time_millis": 5963,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Exporting JAVA_HOME",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Exporting JAVA_HOME",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:45.086Z",
+            "source": "config",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s[52.5.214.234] 3.amazonaws.com/7502c3dd4abd0d7fcee18f55-cs3134-homework-ml3806-7-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=SJcim74dvZDQhcL3IRj6uqC6zsg%3D",
+            "start_time": "2015-09-15T13:36:44.562Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 7,
+            "run_time_millis": 524,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Restore cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Restore cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:47.852Z",
+            "source": "cache",
+            "type": "machine",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/8502c3dd4abd0d7fdee18f55-cs3134-homework-ml3806-8-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=b%2BUGgCN0jOxDMDGtYnKODh8pPpg%3D",
+            "start_time": "2015-09-15T13:36:45.093Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 8,
+            "run_time_millis": 2759,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Save cache",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Save cache",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:49.100Z",
+            "source": "cache",
+            "type": "database",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/9502c3dd4abd0d7ffee18f55-cs3134-homework-ml3806-9-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=5H%2FbWDWgSJ9HmSqF1vk2PZu2SRc%3D",
+            "start_time": "2015-09-15T13:36:47.858Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 9,
+            "run_time_millis": 1242,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "git clone https://github.com/cs3134/grader.git",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "git clone https://github.com/cs3134/grader.git",
+            "bash_command": "git clone https://github.com/cs3134/grader.git",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:49.837Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/a502c3dd4abd0d7f1fe18f55-cs3134-homework-ml3806-10-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=W0qY2UHgA3xEfFSwy32Uume8Ffs%3D",
+            "start_time": "2015-09-15T13:36:49.109Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 10,
+            "run_time_millis": 728,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "cp grader/src/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/src/* ./",
+            "bash_command": "cp grader/src/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:5[52.5.214.234] 0.369Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:49.844Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 11,
+            "run_time_millis": 525,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/lib/* ./",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/lib/* ./",
+            "bash_command": "cp grader/lib/* ./",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:50.897Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:50.373Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 12,
+            "run_time_millis": 524,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/grade.sh ./grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/grade.sh ./grade.sh",
+            "bash_command": "cp grader/grade.sh ./grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:51.425Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:50.901Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 13,
+            "run_time_millis": 524,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "cp grader/config.prop ./config.prop",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "cp grader/config.prop ./config.prop",
+            "bash_command": "cp grader/config.prop ./config.prop",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:51.954Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:51.430Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 14,
+            "run_time_millis": 524,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "sh grade.sh",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": false,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "sh grade.sh",
+            "bash_command": "sh grade.sh",
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:54.990Z",
+            "source": "config",
+            "type": "test",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/0602c3dd4abd0d7f3fe18f55-cs3134-homework-ml3806-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=pvZOnUzpG40uhoO1AxduPgHSNR8%3D",
+            "start_time": "2015-09-15T13:36:51.958Z",
+            "exit_code": 0,
+            "canceled": null,
+            "step": 15,
+            "run_time_millis": 3032,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Collect test metadata (experimental).",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+    [52.5.214.234]         "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect test metadata (experimental).",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:36:56.576Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T13:36:54.994Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 16,
+            "run_time_millis": 1582,
+            "has_output": false
+          }
+        ]
+      },
+      {
+        "name": "Collect artifacts",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Collect artifacts",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:37:03.213Z",
+            "type": "teardown",
+            "messages": [],
+            "output_url": "https://circle-production-action-output.s3.amazonaws.com/2602c3dd4abd0d7f8fe18f55-cs3134-homework-ml3806-17-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=A00YhnNN0xDQgk5JfWwz5WuBUGc%3D",
+            "start_time": "2015-09-15T13:36:56.581Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 17,
+            "run_time_millis": 6632,
+            "has_output": true
+          }
+        ]
+      },
+      {
+        "name": "Disable SSH",
+        "actions": [
+          {
+            "truncated": false,
+            "index": 0,
+            "parallel": true,
+            "failed": null,
+            "infrastructure_fail": null,
+            "name": "Disable SSH",
+            "bash_command": null,
+            "status": "success",
+            "timedout": null,
+            "continue": null,
+            "end_time": "2015-09-15T13:37:03.243Z",
+            "type": "teardown",
+            "messages": [],
+            "start_time": "2015-09-15T13:37:03.226Z",
+            "exit_code": null,
+            "canceled": null,
+            "step": 20,
+            "run_time_millis": 17,
+            "has_output": false
+          }
+        ]
+      }
+    ],
+    "body": "",
+    "usage_queued_at": "2015-09-15T13:36:23.734Z",
+    "retry_of": null,
+    "reponame": "homework-ml3806",
+    "ssh_users": [],
+    "build_url": "https://circleci.com/gh/cs3134/homework-ml3806/11",
+    "parallel": 1,
+    "failed": null,
+    "branch": "master",
+    "username": "cs3134",
+    "author_date": "2015-09-15T09:36:22-04:00",
+    "why": "github",
+    "user": {
+      "is_user": false,
+      "login": "anitamengzhuolu",
+      "email": "ml3806@columbia.edu"
+    },
+    "vcs_revision": "a4d6d55d2acb87668c49e982578305c47504bdbd",
+    "owners": [],
+    "vcs_tag": null,
+    "build_num": 11,
+    "infrastructure_fail": false,
+    "ssh_enabled": false,
+    "committer_email": "ml3806@columbia.edu",
+    "previous": {
+      "build_num": 10,
+      "status": "success",
+      "build_time_millis": 34309
+    },
+    "status": "success",
+    "committer_name": "anitamengzhuolu",
+    "pull_request_urls": [],
+    "retries": null,
+    "subject": "homework 0 completed",
+    "timedout": false,
+    "dont_build": null,
+    "lifecycle": "finished",
+    "stop_time": "2015-09-15T13:37:03.515Z",
+    "build_time_millis": 36529,
+    "circle_yml": {
+      "string": "## Customize the test machine\nmachine:\n  # Version of java to use\n  java:\n    version: oraclejdk8\n\n## Customize test commands\ntest:\n  pre:\n    - git clone https://github.com/cs3134/grader.git\n    - cp grader/src/* ./\n    - cp grader/lib/* ./\n    - cp grader/grade.sh ./grade.sh\n    - cp grader/config.prop ./config.prop\n  override:\n    - sh grade.sh\n\nnotify:\n  webhooks:\n    - url: http://jarvis.xyz/webhook/ci\n"
+    },
+    [52.5.214.234] "messages": [],
+    "is_first_green_build": false,
+    "job_name": null,
+    "start_time": "2015-09-15T13:36:26.986Z",
+    "canceler": null,
+    "all_commit_details": [
+      {
+        "committer_date": "2015-09-15T09:36:22-04:00",
+        "body": "",
+        "branch": "master",
+        "author_date": "2015-09-15T09:36:22-04:00",
+        "committer_email": "ml3806@columbia.edu",
+        "commit": "a4d6d55d2acb87668c49e982578305c47504bdbd",
+        "committer_login": "anitamengzhuolu",
+        "committer_name": "anitamengzhuolu",
+        "subject": "homework 0 completed",
+        "commit_url": "https://github.com/cs3134/homework-ml3806/commit/a4d6d55d2acb87668c49e982578305c47504bdbd",
+        "author_login": "anitamengzhuolu",
+        "author_name": "anitamengzhuolu",
+        "author_email": "ml3806@columbia.edu"
+      }
+    ],
+    "outcome": "success",
+    "vcs_url": "https://github.com/cs3134/homework-ml3806",
+    "author_name": "anitamengzhuolu",
+    "node": [
+      {
+        "public_ip_addr": "54.160.158.77",
+        "port": 64733,
+        "username": "ubuntu",
+        "image_id": "circletar-1092-63dd7-20150819T174634Z",
+        "ssh_enabled": null
+      }
+    ],
+    "queued_at": "2015-09-15T13:36:26.600Z",
+    "canceled": false,
+    "author_email": "ml3806@columbia.edu"
+  }
+}
+Found grade.sh
+https://circle-production-action-output.s3.amazonaws.com/0602c3dd4abd0d7f3fe18f55-cs3134-homework-ml3806-15-0?AWSAccessKeyId=AKIAIX2QAUOBNMZYUAEA&Expires=1600177024&Signature=pvZOnUzpG40uhoO1AxduPgHSNR8%3D
+<Buffer 1f 8b 08 00 00 00 00 00 00 00 65 8f 51 0b 82 30 14 85 ff 4a dc a7 02 8d 2d 35 72 ef 41 04 f6 62 4f b9 1e 86 8d 1a a5 8b 6d 66 22 fe f7 a6 c2 92 7a bc e7 ...>
+Unzipping output
+{ homeworkName: 'hw0',
+  studentScore: 100,
+  errorMessage: '',
+  className: 'cs3134',
+  sections: 
+   [ { sectionName: 'Jarvis3134: sayHi()',
+       sectionScoreMax: 100,
+       sectionScoreStudent: 100,
+       sectionErrorMessage: '' } ],
+  studentMax: 100 }
+Sending webhookGrades email
+Checking uni
+Getting access token
+Finding valid states
+Getting github data
+Getting our data
+Creating student in db
+Authenticating using admin token
+Adding to students team
+Creating student own team
+Recording team id
+Adding to student own team
+Create homework repo
+Add build to CI
+Enabling project
+Following project
+Sending email
+Sending registerSuccess email

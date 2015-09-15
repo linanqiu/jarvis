@@ -49,10 +49,12 @@ Meteor.methods({
     }
   },
   'requestAccessToken': function (state, code) {
+    this.unblock();
     return requestAccessToken(state, code);
   },
   'receiveWebhook': function (body) {
     console.log('Method called');
+    this.unblock();
     extractGrades(body);
   },
   'signupProgress': function (state) {
@@ -266,28 +268,23 @@ function addCiBuild(student) {
 function extractGrades(body) {
   console.log('Extracting grades');
 
-  console.log(JSON.stringify(body, null, 2));
-
   var steps = body.payload.steps;
-  var githubUsername = body.payload.user.login;
+  var reponame = body.payload.reponame;
+  var repouni = reponame.replace('homework-', '');
+  var uni = repouni;
 
   steps.forEach(function (step) {
     if (step.name === 'sh grade.sh') {
       console.log('Found grade.sh');
       var outputUrl = step.actions[0].output_url;
 
-      console.log(outputUrl);
-
       var outputZip = Meteor.http.get(outputUrl, {
         responseType: 'buffer'
       });
-      console.log(outputZip.content);
-
       var zlib = Meteor.npmRequire('zlib');
       var buffer = new Buffer(outputZip.content, 'base64');
 
       console.log('Unzipping output');
-
       var zlibUnzip = Meteor.wrapAsync(zlib.unzip);
       var outputUnzip = zlibUnzip(buffer);
 
@@ -307,25 +304,21 @@ function extractGrades(body) {
           className: 'cs3134'
         }
 
-        console.log(grades);
-
-        addHomeworkGrades(grades, githubUsername, true);
+        addHomeworkGrades(grades, uni, true);
       } else {
         var grades = JSON.parse(output[0].message);
 
-        console.log(grades);
-
-        addHomeworkGrades(grades, githubUsername);
+        addHomeworkGrades(grades, uni);
       }
     }
   });
 }
 
-function addHomeworkGrades(grades, githubUsername, errorMessage) {
+function addHomeworkGrades(grades, uni, errorMessage) {
   var homeworkName = grades.homeworkName;
 
   var student = Students.findOne({
-    githubUsername: githubUsername
+    uni: uni
   });
 
   var currentHomeworks = student.homeworks;
@@ -333,7 +326,7 @@ function addHomeworkGrades(grades, githubUsername, errorMessage) {
   currentHomeworks[homeworkName] = grades;
 
   Students.update({
-    githubUsername: githubUsername
+    uni: uni
   }, {
     $set: {
       homeworks: currentHomeworks
@@ -354,35 +347,37 @@ function addHomeworkGrades(grades, githubUsername, errorMessage) {
 }
 
 function sendEmail(templateToUse, toEmail, data) {
-  if (templateToUse === 'registerSuccess') {
-    console.log('Sending registerSuccess email');
-    Email.send({
-      from: 'Jarvis',
-      to: toEmail,
-      subject: 'Jarvis Registration Completed',
-      text: JSON.stringify(data.student, null, 2)
-    });
-  }
+  Meteor.defer(function () {
+    if (templateToUse === 'registerSuccess') {
+      console.log('Sending registerSuccess email');
+      Email.send({
+        from: 'Jarvis',
+        to: toEmail,
+        subject: 'Jarvis Registration Completed',
+        text: composeRegisterSuccess(data.student)
+      });
+    }
 
-  if (templateToUse === 'webhookGrades') {
-    console.log('Sending webhookGrades email');
-    Email.send({
-      from: 'Jarvis',
-      to: toEmail,
-      subject: data.homeworkName + ' Preliminary Grades',
-      text: JSON.stringify(data.grades, null, 2)
-    });
-  }
+    if (templateToUse === 'webhookGrades') {
+      console.log('Sending webhookGrades email');
+      Email.send({
+        from: 'Jarvis',
+        to: toEmail,
+        subject: data.homeworkName + ' Preliminary Grades',
+        text: composeWebhookGrades(data)
+      });
+    }
 
-  if (templateToUse === 'webhookGradesFail') {
-    console.log('Sending webhookGradesFail email');
-    Email.send({
-      from: 'Jarvis',
-      to: toEmail,
-      subject: data.homeworkName + ' Build Failed',
-      text: JSON.stringify(data.grades, null, 2)
-    });
-  }
+    if (templateToUse === 'webhookGradesFail') {
+      console.log('Sending webhookGradesFail email');
+      Email.send({
+        from: 'Jarvis',
+        to: toEmail,
+        subject: data.homeworkName + ' Build Failed',
+        text: composeWebhookGradesFail(data)
+      });
+    }
+  });
 }
 
 function updateProgress(student, progressMessage) {

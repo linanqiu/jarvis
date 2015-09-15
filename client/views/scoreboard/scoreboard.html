@@ -7,50 +7,65 @@
 			</h2>
 			<div id="page_menu" class="pull-right">
 			</div>
-			<table class="table">
-				<tr>
-					<th>Nickname</th>
-					<th>HW0</th>
-					<th>HW1</th>
-					<th>HW2</th>
-					<th>HW3</th>
-					<th>HW4</th>
-					<th>HW5</th>
-					<th>HW6</th>
-					<th>HW7</th>
-				</tr>
-				{{#each scores}}
-				<tr>
-					<td>{{nickname}}</td>
-					{{#with homeworks}}
-					{{#with hw0}}
-					<td>{{studentScore}}</td>
-					{{/with}}
-					{{#with hw1}}
-					<td>{{studentScore}}</td>
-					{{/with}}
-					{{#with hw2}}
-					<td>{{studentScore}}</td>
-					{{/with}}
-					{{#with hw3}}
-					<td>{{studentScore}}</td>
-					{{/with}}
-					{{#with hw4}}
-					<td>{{studentScore}}</td>
-					{{/with}}
-					{{#with hw5}}
-					<td>{{studentScore}}</td>
-					{{/with}}
-					{{#with hw6}}
-					<td>{{studentScore}}</td>
-					{{/with}}
-					{{#with hw7}}
-					<td>{{studentScore}}</td>
-					{{/with}}
-					{{/with}}
-				</tr>
-				{{/each}}
-			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<p><code>x-men</code> prefix denotes Instructional Assistants.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="table-responsive">
+				<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>Nickname</th>
+						<th>HW0</th>
+						<th>HW1</th>
+						<th>HW2</th>
+						<th>HW3</th>
+						<th>HW4</th>
+						<th>HW5</th>
+						<th>HW6</th>
+						<th>HW7</th>
+					</tr>
+					</thead>
+					<tbody>
+					{{#each scores}}
+					<tr>
+						<td>{{nickname}}</td>
+						{{#with homeworks}}
+						{{#with hw0}}
+						<td>{{studentScore}}</td>
+						{{/with}}
+						{{#with hw1}}
+						<td>{{studentScore}}</td>
+						{{/with}}
+						{{#with hw2}}
+						<td>{{studentScore}}</td>
+						{{/with}}
+						{{#with hw3}}
+						<td>{{studentScore}}</td>
+						{{/with}}
+						{{#with hw4}}
+						<td>{{studentScore}}</td>
+						{{/with}}
+						{{#with hw5}}
+						<td>{{studentScore}}</td>
+						{{/with}}
+						{{#with hw6}}
+						<td>{{studentScore}}</td>
+						{{/with}}
+						{{#with hw7}}
+						<td>{{studentScore}}</td>
+						{{/with}}
+						{{/with}}
+					</tr>
+					{{/each}}
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>
